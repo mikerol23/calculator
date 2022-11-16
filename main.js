@@ -21,9 +21,20 @@ function operate(x, y, operator) {
 let currentDisplay = document.querySelector(".display");
 
 const numBtns = document.querySelectorAll(".numbers");
+
 numBtns.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(button.value);
     currentDisplay.textContent += button.value;
+  });
+});
+
+let firstNumber;
+
+const operatorBtns = document.querySelectorAll(".operators");
+
+operatorBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    firstNumber = parseInt(currentDisplay.textContent);
+    console.log(firstNumber);
   });
 });
