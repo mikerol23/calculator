@@ -17,3 +17,13 @@ const divide = function (x, y) {
 function operate(x, y, operator) {
   return operator(x, y);
 }
+
+let currentDisplay = document.querySelector(".display");
+
+const numBtns = document.querySelectorAll(".numbers");
+numBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(button.value);
+    currentDisplay.textContent += button.value;
+  });
+});
