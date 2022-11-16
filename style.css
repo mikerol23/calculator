@@ -1,3 +1,9 @@
+:root {
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-large;
+  background-color: teal;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -17,6 +23,11 @@
   background: #bccad0;
   height: 84px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .buttonsContainer {
