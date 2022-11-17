@@ -9,8 +9,8 @@ let operatorContainer = document.querySelector("#operator-container");
 let chosenOperator;
 
 function compute() {
-  let x = parseInt(savedNumber.textContent);
-  let y = parseInt(activeNumber.textContent);
+  let x = parseFloat(savedNumber.textContent);
+  let y = parseFloat(activeNumber.textContent);
   let operator = chosenOperator;
 
   savedNumber.textContent = "";
