@@ -18,13 +18,19 @@ function operate(x, y, operator) {
   return operator(x, y);
 }
 
-let currentDisplay = document.querySelector(".display");
+
 
 const numBtns = document.querySelectorAll(".numbers");
+const operatorBtns = document.querySelectorAll(".operators");
+const equalsBtn = document.querySelector(".equals");
+
+let activeNumber = document.getElementById("active-number");
+let savedNumber = document.querySelector("#saved-number");
+let operatorContainer = document.querySelector("#operator-container");
 
 numBtns.forEach((button) => {
   button.addEventListener("click", () => {
-    currentDisplay.textContent += button.value;
+    activeNumber.textContent += button.value;
   });
 });
 
@@ -34,7 +40,9 @@ const operatorBtns = document.querySelectorAll(".operators");
 
 operatorBtns.forEach((button) => {
   button.addEventListener("click", () => {
-    firstNumber = parseInt(currentDisplay.textContent);
-    console.log(firstNumber);
+    savedNumber.textContent = activeNumber.textContent;
+    activeNumber.textContent = "";
+    operatorContainer.textContent = button.textContent;
+    operatorContainer.value = button.id;
   });
 });

@@ -30,6 +30,11 @@
   font-size: 1.75rem;
 }
 
+#operator-container,
+#active-number {
+  padding-left: 0.5rem;
+}
+
 .buttons-container {
   padding: 1rem;
 }
