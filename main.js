@@ -27,7 +27,11 @@ function compute() {
       activeNumber.textContent = x * y;
       break;
     case "divide":
-      activeNumber.textContent = x / y;
+      if (y === 0) {
+        activeNumber.textContent = "Error";
+      } else {
+        activeNumber.textContent = x / y;
+      }
       break;
     default:
       activeNumber.textContent = "Error";
