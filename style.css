@@ -11,6 +11,8 @@
 }
 
 .calculator {
+  max-width: 19rem;
+  width: 100%;
   border-radius: 1rem;
   background-color: #d9d9d9;
 }
@@ -20,19 +22,24 @@
 }
 .display {
   background: #bccad0;
-  height: 84px;
+  height: 4rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: right;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  font-size: 1.75rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
 
-#operator-container,
-#active-number {
+#active-number,
+#saved-number {
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+#operator-container {
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .buttons-container {
