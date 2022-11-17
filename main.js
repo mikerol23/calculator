@@ -1,6 +1,7 @@
 const numBtns = document.querySelectorAll(".numbers");
 const operatorBtns = document.querySelectorAll(".operators");
 const equalsBtn = document.querySelector(".equals");
+const allclearBtn = document.querySelector(".all-clear");
 
 let activeNumber = document.getElementById("active-number");
 let savedNumber = document.querySelector("#saved-number");
@@ -49,3 +50,9 @@ operatorBtns.forEach((button) => {
 });
 
 equalsBtn.addEventListener("click", compute);
+
+allclearBtn.addEventListener("click", () => {
+  activeNumber.textContent = "";
+  operatorContainer.textContent = "";
+  savedNumber.textContent = "";
+});
